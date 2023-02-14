@@ -1,7 +1,7 @@
 ---
 
 
-- name: Network Gettingi Started with first Playbook
+- name: Network Getting Started with first Playbook
   connection: ansible.netcommon.network_cli
   gather_facts: false
   hosts: ios
