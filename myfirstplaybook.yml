@@ -22,7 +22,7 @@
     ios_command:
       commands: show ip int brief
     register: output
-    
+   
   - name: print output
     debug:
      var: output.stdout_lines
