@@ -2,7 +2,8 @@
 
 
 - name: Network Gettingi Started with first Playbook
-  connection: ansible.netcommon.network_cli
+#  connection: ansible.netcommon.network_cli
+   connection: ansible.netcommon.libssh=libssh
   gather_facts: false
   hosts: ios
   
