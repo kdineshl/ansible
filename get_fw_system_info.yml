@@ -1,5 +1,12 @@
- tasks:
-    - name: Check for pending changes
+- name: Get System info from Palo Alto FWs
+  connection: ansible.netcommon.network_cli
+  gather_facts: false
+  hosts: firewall
+
+
+
+tasks:
+    - name: Get system info
       paloaltonetworks.panos.panos_op:
         provider: '{{ device }}'
         cmd: 'show system info'
