@@ -11,3 +11,7 @@ tasks:
         provider: '{{ device }}'
         cmd: 'show system info'
       register: changes
+
+  - name: print changes
+    debug:
+     var: output.stdout_lines
