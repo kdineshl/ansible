@@ -4,6 +4,9 @@
   gather_facts: false
   hosts: firewall
   
+  collections:
+    - paloaltonetworks.panos
+  
   tasks:
   - name: Get system info
     paloaltonetworks.panos.panos_op:
