@@ -8,16 +8,6 @@
   
  
   tasks: 
-    
-#  - name: gather facts (ios)
-#    cisco.ios.ios_facts:
-#    when: ansible_network_os == 'cisco.ios.ios'
-
-#  - name: Get_private_key
-#    community.crypto.openssl_privatekey_info:
-#     path: /home/dinesh/Documents/windows_user
-#    register: result_privatekey
-    
   - name: Display interface brief
     ios_command:
       commands: show ip int brief
