@@ -1,15 +1,17 @@
 ---
+
 - name: Get System info from Palo Alto FWs
   connection: ansible.netcommon.network_cli
   gather_facts: false
   hosts: firewall
+  
   tasks:
-    - name: Get system info
-      paloaltonetworks.panos.panos_op:
+  - name: Get system info
+    paloaltonetworks.panos.panos_op:
         provider: '{{ device }}'
         cmd: 'show system info'
       register: changes
 
 - name: print changes
-    debug:
-     var: output.stdout_lines
+  debug:
+   var: output.stdout_lines
