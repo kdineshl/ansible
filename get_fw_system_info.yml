@@ -3,16 +3,13 @@
   connection: ansible.netcommon.network_cli
   gather_facts: false
   hosts: firewall
-
-
-
-tasks:
+  tasks:
     - name: Get system info
       paloaltonetworks.panos.panos_op:
         provider: '{{ device }}'
         cmd: 'show system info'
       register: changes
 
-  - name: print changes
+- name: print changes
     debug:
      var: output.stdout_lines
