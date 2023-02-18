@@ -10,7 +10,7 @@
     paloaltonetworks.panos.panos_op:
         provider: '{{ device }}'
         cmd: 'show system info'
-      register: changes
+    register: changes
 
   - name: print changes
     debug:
