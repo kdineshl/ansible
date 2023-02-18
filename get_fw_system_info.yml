@@ -1,7 +1,6 @@
 ---
 
-- name: Get System info from Palo Alto FWs
-  connection: local
+- connection: local
   gather_facts: false
   hosts: firewall
   
