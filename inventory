@@ -2,9 +2,8 @@
 192.168.0.103
 192.168.0.158
 
-firewall
-ha_pair
+[firewall]
+192.168.0.222
 
-panorama
-panorama_ha_pair
+
  
