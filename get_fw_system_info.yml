@@ -1,7 +1,7 @@
 ---
 
 - connection: local
-  gather_facts: false
+  gather_facts: true
   hosts: firewall
 
   collections:
