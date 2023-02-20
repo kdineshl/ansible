@@ -18,7 +18,7 @@
 
  
 
- tasks:
+  tasks:
   - name: Get system info
     panos_op:
       provider: '{{ device }}'
