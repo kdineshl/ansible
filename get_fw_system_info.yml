@@ -14,7 +14,7 @@
   tasks:
   - name: Get system info
     panos_op:
-      provider: '{{ provider }}'
+ #     provider: '{{ provider }}'
       cmd: 'show system info'
     register: info 
 
