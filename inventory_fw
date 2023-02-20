@@ -1,2 +1,4 @@
 [firewall]
 192.168.0.222
+[firewall:vars]
+ansible_python_interpreter=/usr/bin/python3
