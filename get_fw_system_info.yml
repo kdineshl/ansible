@@ -8,8 +8,8 @@
     - paloaltonetworks.panos
 
  
-  roles:
-  - role: PaloAltoNetworks.paloaltonetworks
+ # roles:
+ # - role: PaloAltoNetworks.paloaltonetworks
  
   tasks:
   - name: Get system info
