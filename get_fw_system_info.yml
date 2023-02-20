@@ -1,8 +1,9 @@
 ---
 
-- connection: local
+- hosts: firewall
+  connection: local
   gather_facts: true
-  hosts: firewall
+
 
   collections:
     - paloaltonetworks.panos
