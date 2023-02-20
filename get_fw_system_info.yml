@@ -3,17 +3,21 @@
 - connection: local
   gather_facts: false
   hosts: firewall
-  
+
   collections:
     - paloaltonetworks.panos
-  
+
+ 
+  roles:
+  - role: PaloAltoNetworks.paloaltonetworks
+ 
   tasks:
   - name: Get system info
-    paloaltonetworks.panos.panos_op:
-        provider: '{{ device }}'
-        cmd: 'show system info'
-    register: changes
+    panos_op:
+      provider: '{{ provider }}'
+      cmd: 'show system info'
+    register: info 
 
-  - name: print changes
-    debug:
-     var: output.stdout_lines
+
+  - debug:
+      msg: '{{ info.stdout }}'
