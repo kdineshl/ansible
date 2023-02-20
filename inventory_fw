@@ -1,4 +1,7 @@
 [firewall]
 192.168.0.222
 [firewall:vars]
-ansible_python_interpreter=/usr/bin/python3
+#ansible_python_interpreter=/usr/bin/python3
+ip_address=192.168.0.222
+username=admin
+password=!Q2w3e4r
