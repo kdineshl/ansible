@@ -13,8 +13,8 @@
       username: '{{ username | default(omit) }}'
       password: '{{ password | default(omit) }}'
       
- collections:
-   - paloaltonetworks.panos
+  collections:
+  - paloaltonetworks.panos
 
  
 
