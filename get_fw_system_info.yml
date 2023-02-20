@@ -15,7 +15,7 @@
   - name: Get system info
     panos_op:
  #     provider: '{{ provider }}'
-      cmd: 'show system info'
+      cmd: 'show high-availability state'
     register: info 
 
 
