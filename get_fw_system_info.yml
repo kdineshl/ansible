@@ -4,7 +4,11 @@
   connection: local
   gather_facts: true
 
-
+  vars:
+    device:
+      ip_address: '{{ ip_address }}'
+      username: '{{ username | default(omit) }}'
+      password: '{{ password | default(omit) }}'
   collections:
     - paloaltonetworks.panos
 
@@ -15,7 +19,7 @@
   tasks:
   - name: Get system info
     panos_op:
- #     provider: '{{ provider }}'
+      provider: '{{ device }}'
       cmd: 'show high-availability state'
     register: info 
 
