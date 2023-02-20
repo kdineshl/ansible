@@ -3,20 +3,22 @@
 - hosts: firewall
   connection: local
   gather_facts: true
-
+ 
+  roles:
+  - role: PaloAltoNetworks.paloaltonetworks
+ 
   vars:
     device:
       ip_address: '{{ ip_address }}'
       username: '{{ username | default(omit) }}'
       password: '{{ password | default(omit) }}'
-  collections:
-    - paloaltonetworks.panos
+      
+ collections:
+   - paloaltonetworks.panos
 
  
- # roles:
- # - role: PaloAltoNetworks.paloaltonetworks
- 
-  tasks:
+
+ tasks:
   - name: Get system info
     panos_op:
       provider: '{{ device }}'
