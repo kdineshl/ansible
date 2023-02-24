@@ -1,7 +1,7 @@
 ---
 
 
-- name: Network Getting Started with first Playbook
+- name: Nexus int
   connection: ansible.netcommon.network_cli
   gather_facts: false
   hosts: nexus
