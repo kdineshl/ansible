@@ -9,7 +9,7 @@
  
   tasks: 
   - name: Display interface brief
-    nxos_command:
+    cisco.nxos.nxos_command:
       commands: show ip int brief vrf all
     register: output
    
