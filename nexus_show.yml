@@ -3,6 +3,7 @@
 
 - name: Nexus int
   connection: ansible.netcommon.network_cli
+  network_os: cisco.nxos.nxos
   gather_facts: false
   hosts: nexus
   
